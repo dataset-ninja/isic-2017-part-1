@@ -12,7 +12,7 @@ The goal of the challenge is to help participants develop image analysis tools t
 
 For each, data consisted of images and corresponding ground truth annotations, split into training (n=2000), validation (n=150), and holdout test (n=600) datasets. Predictions could be submitted on validation and test datasets. The validation submissions provided instantaneous feedback in the form of performance evaluations, as well as ranking in comparison to other participants. Test submissions only provided feedback after the submission deadline.
 
-# About Lesion Segmentation
+## About Lesion Segmentation
 
 Participants were asked to submit automated predictions of lesion segmentations from dermoscopic images in the form of binary masks. Lesion segmentation training data included the original image, paired with the expert manual tracing of the lesion boundaries also in the form of a binary mask, where pixel values of 255 were considered inside the area of the lesion, and pixel values of 0 were outside.
 
