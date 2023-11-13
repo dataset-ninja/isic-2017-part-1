@@ -13,37 +13,37 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "ISIC 2017: Part 1 - Lesion Segmentation"
+PROJECT_NAME_FULL: str = "ISIC 2017: Part 1 - Lesion Segmentation"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.CC0_1_0()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Medical()]
+CATEGORY: Category = Category.Medical()
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
+ANNOTATION_TYPES: List[AnnotationType] = [CVTask.SemanticSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2017
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://challenge.isic-archive.com/landing/2017/42/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 8510653
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/isic-2017-part-1"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://challenge.isic-archive.com/data/#2017"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,19 +51,45 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://arxiv.org/abs/1710.05006"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"some_link_to_repo_if_exists"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
-CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+CITATION_URL: Optional[str] = "https://arxiv.org/abs/1710.05006"
+AUTHORS: Optional[List[str]] = [
+    "Noel C. F. Codella",
+    "David Gutman",
+    "M. Emre Celebi",
+    "Brian Helba",
+    "Michael A. Marchetti",
+    "Stephen W. Dusza",
+    "Aadi Kalloo",
+    "Konstantinos Liopyris",
+    "Nabin Mishra",
+    "Harald Kittler",
+    "Allan Halpern"
+]
 AUTHORS_CONTACTS: Optional[List[str]] = None
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
+    "IBM T. J. Watson Research Center", "Emory University", 
+    "University of Central Arkansas", "Kitware", 
+    "Memorial Sloan-Kettering Cancer Center", 
+    "Missouri University of Science and Technology, USA", 
+    "Medical University of Vienna, Austria"
+]
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
+    "https://research.ibm.com/labs/watson/", 
+    "https://www.emory.edu/home/index.html", 
+    "https://uca.edu/", 
+    "https://www.kitware.com/", 
+    "https://www.mskcc.org/", 
+    "https://www.mst.edu/", 
+    "https://www.meduniwien.ac.at/web/en/"
+]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__": "Also, the dataset contains ***age_approximate*** and ***sex*** tags"}
 TAGS: Optional[List[str]] = None
 
 
