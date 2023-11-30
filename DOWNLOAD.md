@@ -1,6 +1,6 @@
 Dataset **ISIC 2017: Part 1 - Lesion Segmentation** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/Z/o/T8/27SoDHibjGLxQHr8cCGfVpQTLsCHNZpkkseHG4NORxZawCwUAUCo4IYjoJQO0rW1drysIfrwicrxSEyUgtwZzXgcQmzZg490EXPJvJzCmE7u5XGXbkEPX8PZYqEA.tar)
+ [Download](https://www.dropbox.com/scl/fi/324f8p5ghb5gi9cvfjpvq/isic-2017-part-1-lesion-segmentation-DatasetNinja.tar?rlkey=g9qiwvbthx8fmz2s4dcq0tsxi&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
